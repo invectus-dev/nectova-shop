@@ -1,0 +1,26 @@
+[0;1;32m●[0m httpd.service - The Apache HTTP Server
+     Loaded: loaded (]8;;file://biww-fedora/usr/lib/systemd/system/httpd.service\/usr/lib/systemd/system/httpd.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─]8;;file://biww-fedora/usr/lib/systemd/system/service.d/10-timeout-abort.conf\10-timeout-abort.conf]8;;\
+             /etc/systemd/system/httpd.service.d
+             └─]8;;file://biww-fedora/etc/systemd/system/httpd.service.d/php-fpm.conf\php-fpm.conf]8;;\
+     Active: [0;1;32mactive (running)[0m since Wed 2025-07-02 23:31:13 WIB; 42s ago
+ Invocation: bdbc0fe746c542048ab16e4e73053b60
+       Docs: ]8;;man:httpd.service(8)\man:httpd.service(8)]8;;\
+   Main PID: 37876 (httpd)
+     Status: "[0;1;36mTotal requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec[0m"
+      Tasks: 177[0;38;5;245m (limit: 28205)[0m
+     Memory: 13.9M (peak: 15.1M)
+        CPU: 104ms
+     CGroup: /system.slice/httpd.service
+             ├─[0;38;5;245m37876 /usr/sbin/httpd -DFOREGROUND[0m
+             ├─[0;38;5;245m37877 /usr/sbin/httpd -DFOREGROUND[0m
+             ├─[0;38;5;245m37878 /usr/sbin/httpd -DFOREGROUND[0m
+             ├─[0;38;5;245m37879 /usr/sbin/httpd -DFOREGROUND[0m
+             └─[0;38;5;245m37880 /usr/sbin/httpd -DFOREGROUND[0m
+
+Jul 02 23:31:13 biww-fedora systemd[1]: Starting httpd.service - The Apache HTTP Server...
+Jul 02 23:31:13 biww-fedora (httpd)[37876]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mhttpd.service: Referenced but unset environment variable evaluates to an empty string: OPTIONS[0m
+Jul 02 23:31:13 biww-fedora httpd[37876]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::7c22:e732:e72a:2434%wlp62s0. Set the 'ServerName' directive globally to suppress this message
+Jul 02 23:31:13 biww-fedora httpd[37876]: Server configured, listening on: port 80
+Jul 02 23:31:13 biww-fedora systemd[1]: Started httpd.service - The Apache HTTP Server.
